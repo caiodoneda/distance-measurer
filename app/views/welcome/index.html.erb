@@ -3,8 +3,8 @@
 		<div class="col-md-12">
 			<h2>Calule a distância aproximada entre dois endereços</h2>
 			<div class="destinations-form">
-				<%= form_tag("/index", method: "post", class: "form-horizontal") do %>
-					<div class="col-lg-6">
+				<div class="col-lg-6">
+					<%= form_tag("/index", method: "post", class: "form-horizontal") do %>
 						<div class="form-group">
 							<%= label_tag(:origin, "Origem", class: "col-lg-2 control-label")%>
 							<div class="col-lg-10">
@@ -24,11 +24,27 @@
 								<%= submit_tag("Calcular", class: "btn btn-primary") %> 
 							</div>
 						</div>
+					<% end %>
+				</div>
 
-						<%= @welcome[:origin_geocode].inspect %>
-						<%= @welcome[:destination_geocode].inspect %>
+				<div class="col-lg-6">
+					<iframe height='180' width='500' src="https://www.google.com/maps/embed/v1/directions?origin=<%= @welcome[:map][:origin] %>&destination=<%= @welcome[:map][:destination] %>&key=AIzaSyCAbB6OSFMpuw3vyzGX70fLDok04ABY5EM">
+					</iframe>
+				</div>
+
+				<!-- <div class="col-lg-12">
+					<div class="form-group">
+						<ul class="list-group">
+							<li class="list-group-item">
+								
+								<%= @welcome[:driving]["destination_addresses"]%>
+							</li>
+						</ul>
+						<p> 
+							<%= @welcome[:driving]['rows'].first['elements'].first %>	
+						</p>	
 					</div>
-				<% end %>
+				</div> -->
 			</div>	
 		</div>
 	</div>
