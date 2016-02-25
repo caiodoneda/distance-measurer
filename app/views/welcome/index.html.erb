@@ -31,21 +31,28 @@
 					<iframe height='180' width='500' src="https://www.google.com/maps/embed/v1/directions?origin=<%= @welcome[:map][:origin] %>&destination=<%= @welcome[:map][:destination] %>&key=AIzaSyCAbB6OSFMpuw3vyzGX70fLDok04ABY5EM">
 					</iframe>
 				</div>
+			</div>
+		</div>	
+	</div>
 
-				<!-- <div class="col-lg-12">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="results">
+				<div class="col-lg-3">
 					<div class="form-group">
 						<ul class="list-group">
 							<li class="list-group-item">
-								
-								<%= @welcome[:driving]["destination_addresses"]%>
+								<span class="badge"> <%= @welcome[:driving][:distance]%> m </span>
+								Distância
+							</li>
+							<li class="list-group-item">
+								<span class="badge"> <%= @welcome[:driving][:duration] / 60%>  min </span>
+								tempo 								
 							</li>
 						</ul>
-						<p> 
-							<%= @welcome[:driving]['rows'].first['elements'].first %>	
-						</p>	
 					</div>
-				</div> -->
-			</div>	
+				</div>
+			</div>
 		</div>
-	</div>
+	</div>			
 </div>
