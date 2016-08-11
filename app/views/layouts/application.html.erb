@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Learning Rails</title>
+  <title>Learning rails</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -21,13 +21,28 @@
 	    <div id="navbar" class="navbar-collapse collapse">
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><%= link_to('API', api_path) %></li>
-	        <li><a href="#">Acessar</a></li>
-	      </ul>	     
+	        <% if user_signed_in? %>
+	        	<li>  
+	        		<%= link_to 'Sair', destroy_user_session_path, method: :delete %>
+	        	</li>
+	        <% else %>
+	        	<li> 
+	        		<%= link_to 'Acessar', new_user_session_path %> 
+	        	</li>
+	        <% end %>
+	      </ul>
 	    </div>
 	  </div>
 	</nav>
-		
-	<%= yield %>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>

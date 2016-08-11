@@ -16,6 +16,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'bootswatch-rails'
 
+gem 'devise'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -53,7 +55,3 @@ group :development do
 	gem 'sqlite3'
 end
 
-group :production do
-	gem 'pg'
-	gem 'rails_12factor'
-end

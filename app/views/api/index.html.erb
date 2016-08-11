@@ -1,7 +1,18 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<h2> <%= @api %> </h2>	
+			<h2>Utilize nossa API:</h2>
+			<br>
+			<p>Para calcular a distância entre dois destinos, realize uma chamada na URL (api/v1/distance) passando como parâmetros os dois endereços. </p>
+
+			<br>
+			<p><strong> Exemplo de chamada: </strong></p>
+			
+			<div class="alert alert-dismissible alert-info">
+				<label>
+					curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET localhost:3000/api/distance?address1=Pra%C3%A7a%20XV%20de%20Novembro%20-%20Rua%20Tenente%20Silveira%20-%20Centro%2C%20Florian%C3%B3polis%20-%20SC&address2=Shopping%20Iguatemi%2C%20Florian%C3%B3polis%20-%20Santa%20Monica%2C%20State%20of%20Santa%20Catarina
+				</label>	
+			</div>
 		</div>
 	</div>
 </div>
