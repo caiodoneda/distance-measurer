@@ -1,5 +1,3 @@
 == Distance measurer
 
 Simple application that measures the distance between two addresses.
-
-(http://distance-measurer.herokuapp.com/)
